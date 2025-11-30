@@ -161,3 +161,40 @@ header h1 { margin: 0; font-size: 1.5em; font-weight: 600; }
 .ai-bubble:hover + .copy-btn, .copy-btn:hover { opacity: 1; color: #00abf0; }
 .loading-indicator span { background-color: #00abf0; }
 footer { text-align: center; padding: 10px; font-size: 0.8em; color: #6a8bad; }
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+    /* Hero Section Adjustments */
+    .hero-section {
+        flex-direction: column-reverse; /* Stack image on top of text */
+        padding: 100px 5%;
+        text-align: center;
+    }
+
+    .hero-content h3 {
+        font-size: 26px; /* Smaller font for mobile */
+    }
+
+    .hero-content h1 {
+        font-size: 42px; /* Smaller font for mobile */
+    }
+
+    .hero-image {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .hero-image i {
+        font-size: 16rem; /* Smaller icon for mobile */
+    }
+
+    .social-links {
+        justify-content: center; /* Center the social icons */
+    }
+
+    /* Chat Section Adjustments */
+    .chat-section {
+        padding: 50px 5%;
+    }
+}

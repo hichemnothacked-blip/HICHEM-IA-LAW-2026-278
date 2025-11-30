@@ -1,0 +1,163 @@
+/* Import a Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #081b29; /* Dark blue background */
+    color: #ededed; /* Light text color */
+}
+/* --- Hero Section Styles --- */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 10%;
+    min-height: 100vh;
+}
+.hero-content {
+    max-width: 600px;
+}
+.hero-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    color: #00abf0; /* Accent color */
+}
+.hero-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+.social-links {
+    margin-bottom: 30px;
+}
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: .5s;
+}
+.social-links a:hover {
+    background: #00abf0;
+    color: #081b29;
+    box-shadow: 0 0 20px #00abf0;
+}
+.hero-buttons {
+    margin-top: 30px;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: .5s;
+}
+.btn-secondary {
+    background: transparent;
+    color: #00abf0;
+    border: 2px solid #00abf0;
+}
+.btn-secondary:hover {
+    background: #00abf0;
+    color: #081b29;
+}
+.hero-image {
+    width: 450px; /* Maintain container size */
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-image i {
+    font-size: 25rem; /* Make the icon large */
+    color: #00abf0; /* Match the accent color */
+    animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.typing-text::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* --- Chat Section Styles --- */
+.chat-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10%;
+    min-height: 100vh;
+}
+#chat-container { 
+    width: 100%; 
+    max-width: 800px; 
+    height: 80vh; 
+    background: #0c2d41; /* Darker container background */
+    border: 1px solid #00abf0;
+    border-radius: 12px; 
+    box-shadow: 0 10px 30px rgba(0, 171, 240, 0.1); 
+    display: flex; 
+    flex-direction: column; 
+}
+header { 
+    background: #081b29; /* Match body background */
+    color: #ededed; 
+    padding: 20px; 
+    border-radius: 12px 12px 0 0; 
+    text-align: center; 
+    border-bottom: 1px solid #00abf0;
+}
+header h1 { margin: 0; font-size: 1.5em; font-weight: 600; }
+#chat-box { flex-grow: 1; padding: 20px; overflow-y: auto; }
+.message { margin-bottom: 15px; display: flex; flex-direction: column; }
+.user-message { align-items: flex-end; }
+.ai-message { align-items: flex-start; }
+.message-bubble { max-width: 75%; padding: 12px 18px; border-radius: 18px; line-height: 1.6; }
+.user-bubble { background: #00abf0; color: #081b29; border-bottom-right-radius: 4px; }
+.ai-bubble { background: #1a3a50; color: #ededed; border-bottom-left-radius: 4px; }
+#input-area { display: flex; padding: 15px; border-top: 1px solid #00abf0; }
+#user-input { flex-grow: 1; border: 1px solid #334e68; border-radius: 25px; padding: 12px 20px; font-size: 1em; outline: none; background: #081b29; color: #ededed; }
+#user-input:focus { border-color: #00abf0; box-shadow: 0 0 0 3px rgba(0, 171, 240, 0.2); }
+#send-btn { background: #00abf0; color: #081b29; border: none; border-radius: 50%; width: 48px; height: 48px; margin-left: 10px; cursor: pointer; font-size: 1.5em; transition: background-color 0.3s; display: flex; align-items: center; justify-content: center; }
+#send-btn:hover { background: #3ccfff; }
+.ai-bubble pre { background-color: #081b29; color: #f8f8f2; padding: 15px; border-radius: 8px; overflow-x: auto; border: 1px solid #334e68; }
+.copy-btn { position: absolute; bottom: 5px; right: -40px; background: none; border: none; cursor: pointer; font-size: 1.1em; color: #6a8bad; opacity: 0; transition: opacity 0.2s, color 0.2s; }
+.ai-bubble:hover + .copy-btn, .copy-btn:hover { opacity: 1; color: #00abf0; }
+.loading-indicator span { background-color: #00abf0; }
+footer { text-align: center; padding: 10px; font-size: 0.8em; color: #6a8bad; }
